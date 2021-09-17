@@ -42,7 +42,7 @@ function App() {
     return () => {
       
     }
-  }, [])
+  }, )
 
   async function callApi () {
     const url = `https://api.nasa.gov/planetary/apod?start_date=2021-08-30&api_key=bwToWga6yNLMtKSaU7siWCE0NVGObtnjWFTYNgqm`
@@ -101,8 +101,8 @@ function App() {
 
             <div class="wrapper">
             <div className="heart-button-wrapper">
-              <img className="heart-bottom-button" src={heartEmpty} onClick={e=> likePhoto(photo.date)}/>
-              <img id={`heart-full${index}`} className="heart-top-button" src={heartFull} onClick={e=> likePhoto(photo.date)}/>
+              <img className="heart-bottom-button" src={heartEmpty} onClick={e=> likePhoto(photo.date)} alt=""/>
+              <img id={`heart-full${index}`} className="heart-top-button" src={heartFull} alt="" onClick={e=> likePhoto(photo.date)}/>
             </div>
 
             <div className="more-button" onClick={e=> showMore(photo.date)} >
